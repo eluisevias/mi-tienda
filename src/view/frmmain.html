@@ -1,0 +1,285 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta name="generator" content="Lazarus SynEdit Html Exporter">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>frmmain</title>
+</head>
+<body text="black" bgcolor="#FFFFFF"><pre><code><font  size=3 face="Courier New"><font color="blue"><b>{
+ ***************************************************************************
+ *                                                                         *
+ *   This source is free software; you can redistribute it and/or modify   *
+ *   it under the terms of the GNU General Public License as published by  *
+ *   the Free Software Foundation; either version 2 of the License, or     *
+ *   (at your option) any later version.                                   *
+ *                                                                         *
+ *   This code is distributed in the hope that it will be useful, but      *
+ *   WITHOUT ANY WARRANTY; without even the implied warranty of            *
+ *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU     *
+ *   General Public License for more details.                              *
+ *                                                                         *
+ *   A copy of the GNU General Public License is available on the World    *
+ *   Wide Web at &lt;http://www.gnu.org/copyleft/gpl.html&gt;. You can also      *
+ *   obtain it by writing to the Free Software Foundation,                 *
+ *   Inc., 51 Franklin Street - Fifth Floor, Boston, MA 02110-1335, USA.   *
+ *                                                                         *
+ ***************************************************************************
+}
+</b></font><b>unit </b>frmmain<font color="red">;
+
+</font><b>interface
+
+uses
+  </b>SysUtils<font color="red">, </font>Controls<font color="red">, </font>Forms<font color="red">, </font>Dialogs<font color="red">, </font>DB<font color="red">, </font>Dbf<font color="red">, </font>DBGrids<font color="red">, </font>DBCtrls<font color="red">, </font>ExtCtrls<font color="red">,
+  </font>ActnList<font color="red">, </font>Menus<font color="red">, </font>StdCtrls<font color="red">;
+
+</font><b>type
+  </b>TDataSetFirst <font color="red">= </font>TAction<font color="red">;
+  </font>TDataSetPrior <font color="red">= </font>TAction<font color="red">;
+  </font>TDataSetNext <font color="red">= </font>TAction<font color="red">;
+  </font>TDataSetLast <font color="red">= </font>TAction<font color="red">;
+  </font>TDataSetInsert <font color="red">= </font>TAction<font color="red">;
+  </font>TDataSetDelete <font color="red">= </font>TAction<font color="red">;
+  </font>TDataSetEdit <font color="red">= </font>TAction<font color="red">;
+  </font>TDataSetPost <font color="red">= </font>TAction<font color="red">;
+  </font>TDataSetCancel <font color="red">= </font>TAction<font color="red">;
+  </font>TDataSetRefresh <font color="red">= </font>TAction<font color="red">;
+
+  </font><font color="blue"><b>{ TMainForm }
+
+  </b></font>TMainForm <font color="red">= </font><b>class</b><font color="red">(</font>TForm<font color="red">)
+    </font>DSAddress<font color="red">: </font>TDataSource<font color="red">;
+    </font>MMain<font color="red">: </font>TMainMenu<font color="red">;
+    </font>MFile<font color="red">: </font>TMenuItem<font color="red">;
+    </font>ALMain<font color="red">: </font>TActionList<font color="red">;
+    </font>ANew<font color="red">: </font>TAction<font color="red">;
+    </font>AOpen<font color="red">: </font>TAction<font color="red">;
+    </font>AClose<font color="red">: </font>TAction<font color="red">;
+    </font>AQuit<font color="red">: </font>TAction<font color="red">;
+    </font>MINew<font color="red">: </font>TMenuItem<font color="red">;
+    </font>MIOpen<font color="red">: </font>TMenuItem<font color="red">;
+    </font>PTop<font color="red">: </font>TPanel<font color="red">;
+    </font>DBNavigator1<font color="red">: </font>TDBNavigator<font color="red">;
+    </font>GDBA<font color="red">: </font>TDBGrid<font color="red">;
+    </font>PBottom<font color="red">: </font>TPanel<font color="red">;
+    </font>DBA<font color="red">: </font>TDbf<font color="red">;
+    </font>SDDBA<font color="red">: </font>TSaveDialog<font color="red">;
+    </font>ODDBA<font color="red">: </font>TOpenDialog<font color="red">;
+    </font><font color="blue"><b>//DSAddress: TDataSource;
+    </b></font>ELastName<font color="red">: </font>TDBEdit<font color="red">;
+    </font>EFirstName<font color="red">: </font>TDBEdit<font color="red">;
+    </font>EStreet<font color="red">: </font>TDBEdit<font color="red">;
+    </font>EZip<font color="red">: </font>TDBEdit<font color="red">;
+    </font>ECountry<font color="red">: </font>TDBEdit<font color="red">;
+    </font>EWWW<font color="red">: </font>TDBEdit<font color="red">;
+    </font>ETelephone<font color="red">: </font>TDBEdit<font color="red">;
+    </font>EFax<font color="red">: </font>TDBEdit<font color="red">;
+    </font>EMobile<font color="red">: </font>TDBEdit<font color="red">;
+    </font>EEmail<font color="red">: </font>TDBEdit<font color="red">;
+    </font>ETown<font color="red">: </font>TDBEdit<font color="red">;
+    </font>LELastName<font color="red">: </font>TLabel<font color="red">;
+    </font>LEFirstName<font color="red">: </font>TLabel<font color="red">;
+    </font>LEStreet<font color="red">: </font>TLabel<font color="red">;
+    </font>LEZip<font color="red">: </font>TLabel<font color="red">;
+    </font>LETown<font color="red">: </font>TLabel<font color="red">;
+    </font>LETelephone<font color="red">: </font>TLabel<font color="red">;
+    </font>LECountry<font color="red">: </font>TLabel<font color="red">;
+    </font>LEFax<font color="red">: </font>TLabel<font color="red">;
+    </font>LEMobile<font color="red">: </font>TLabel<font color="red">;
+    </font>LEEmail<font color="red">: </font>TLabel<font color="red">;
+    </font>LEWWW<font color="red">: </font>TLabel<font color="red">;
+    </font>MIClose<font color="red">: </font>TMenuItem<font color="red">;
+    </font>N1<font color="red">: </font>TMenuItem<font color="red">;
+    </font>MIQuit<font color="red">: </font>TMenuItem<font color="red">;
+    </font>AFirst<font color="red">: </font>TDataSetFirst<font color="red">;
+    </font>APrior<font color="red">: </font>TDataSetPrior<font color="red">;
+    </font>ANext<font color="red">: </font>TDataSetNext<font color="red">;
+    </font>ALast<font color="red">: </font>TDataSetLast<font color="red">;
+    </font>AInsert<font color="red">: </font>TDataSetInsert<font color="red">;
+    </font>ADelete<font color="red">: </font>TDataSetDelete<font color="red">;
+    </font>AEdit<font color="red">: </font>TDataSetEdit<font color="red">;
+    </font>APost<font color="red">: </font>TDataSetPost<font color="red">;
+    </font>ACancel<font color="red">: </font>TDataSetCancel<font color="red">;
+    </font>ARefresh<font color="red">: </font>TDataSetRefresh<font color="red">;
+    </font>Record1<font color="red">: </font>TMenuItem<font color="red">;
+    </font>MIFirst<font color="red">: </font>TMenuItem<font color="red">;
+    </font>MILAst<font color="red">: </font>TMenuItem<font color="red">;
+    </font>MIPrior<font color="red">: </font>TMenuItem<font color="red">;
+    </font>MINext<font color="red">: </font>TMenuItem<font color="red">;
+    </font>N2<font color="red">: </font>TMenuItem<font color="red">;
+    </font>MIEdit<font color="red">: </font>TMenuItem<font color="red">;
+    </font>MIDelete<font color="red">: </font>TMenuItem<font color="red">;
+    </font>MIPost<font color="red">: </font>TMenuItem<font color="red">;
+    </font>MICancel<font color="red">: </font>TMenuItem<font color="red">;
+    </font>MIRefresh<font color="red">: </font>TMenuItem<font color="red">;
+    </font>MIInsert<font color="red">: </font>TMenuItem<font color="red">;
+    </font><b>procedure </b>ANewExecute<font color="red">(</font>Sender<font color="red">: </font>TObject<font color="red">);
+    </font><b>procedure </b>AOpenExecute<font color="red">(</font>Sender<font color="red">: </font>TObject<font color="red">);
+    </font><b>procedure </b>ACloseExecute<font color="red">(</font>Sender<font color="red">: </font>TObject<font color="red">);
+    </font><b>procedure </b>ACloseUpdate<font color="red">(</font>Sender<font color="red">: </font>TObject<font color="red">);
+    </font><b>procedure </b>AQuitExecute<font color="red">(</font>Sender<font color="red">: </font>TObject<font color="red">);
+    </font><b>procedure </b>DataOpen<font color="red">(</font>Sender<font color="red">: </font>TObject<font color="red">);
+    </font><b>procedure </b>DoDataAction<font color="red">(</font>Sender<font color="red">: </font>TObject<font color="red">);
+    </font><b>procedure </b>FormCloseQuery<font color="red">(</font>Sender<font color="red">: </font>TObject<font color="red">; </font><b>var </b>CanClose<font color="red">: </font>Boolean<font color="red">);
+    </font><b>procedure </b>FormClose<font color="red">(</font>Sender<font color="red">: </font>TObject<font color="red">; </font><b>var </b>CloseAction<font color="red">: </font>TCloseAction<font color="red">);
+    </font><b>procedure </b>DBAAfterInsert<font color="red">(</font>DataSet<font color="red">: </font>TDataSet<font color="red">);
+    </font><b>procedure </b>HaveDataNotEmpty<font color="red">(</font>Sender<font color="red">: </font>TObject<font color="red">);
+    </font><b>procedure </b>InEditMode<font color="red">(</font>Sender<font color="red">: </font>TObject<font color="red">);
+  </font><b>private
+    procedure </b>CreateTable<font color="red">(</font>AFileName <font color="red">: </font><b>String</b><font color="red">);
+    </font><b>procedure </b>OpenTable<font color="red">(</font>AFileName<font color="red">: </font><b>String</b><font color="red">);
+    </font><b>procedure </b>CloseTable<font color="red">;
+    </font><font color="blue"><b>{ Private declarations }
+  </b></font><b>public
+    </b><font color="blue"><b>{ Public declarations }
+  </b></font><b>end</b><font color="red">;
+
+</font><b>var
+  </b>MainForm<font color="red">: </font>TMainForm<font color="red">;
+
+</font><b>implementation
+
+</b><font color="red"><b>{$R *.lfm}
+
+</b></font><b>resourcestring
+  </b>SSaveData <font color="red">= </font><font color="blue">'There is still unsaved data. Save now ?'</font><font color="red">;
+
+</font><font color="blue"><b>{ Action  handlers }
+
+</b></font><b>procedure </b>TMainForm<font color="red">.</font>ANewExecute<font color="red">(</font>Sender<font color="red">: </font>TObject<font color="red">);
+</font><b>begin
+  With </b>SDDBA <b>do
+    If </b>Execute <b>then
+      </b>CreateTable<font color="red">(</font>FileName<font color="red">);
+</font><b>end</b><font color="red">;
+
+</font><b>procedure </b>TMainForm<font color="red">.</font>ACloseExecute<font color="red">(</font>Sender<font color="red">: </font>TObject<font color="red">);
+</font><b>begin
+  </b>CloseTable<font color="red">;
+</font><b>end</b><font color="red">;
+
+</font><b>procedure </b>TMainForm<font color="red">.</font>ACloseUpdate<font color="red">(</font>Sender<font color="red">: </font>TObject<font color="red">);
+</font><b>begin
+  </b><font color="red">(</font>Sender <b>as </b>Taction<font color="red">).</font>Enabled<font color="red">:=</font><b>Not </b><font color="red">(</font>DBA<font color="red">.</font>State <b>in </b>dsEditModes<font color="red">);
+</font><b>end</b><font color="red">;
+
+</font><b>procedure </b>TMainForm<font color="red">.</font>CreateTable<font color="red">(</font>AFileName <font color="red">: </font><b>String</b><font color="red">);
+</font><b>begin
+  With </b>DBA <b>do
+    begin
+    </b>Close<font color="red">;
+    </font><b>with </b>FieldDefs <b>do
+      begin
+      </b>Clear<font color="red">;
+      </font>Add<font color="red">(</font><font color="blue">'FirstName'</font><font color="red">,</font>ftString<font color="red">,</font><font color="navy">30</font><font color="red">);
+      </font>Add<font color="red">(</font><font color="blue">'LastName'</font><font color="red">,</font>ftString<font color="red">,</font><font color="navy">30</font><font color="red">);
+      </font>Add<font color="red">(</font><font color="blue">'Street'</font><font color="red">,</font>ftString<font color="red">,</font><font color="navy">50</font><font color="red">);
+      </font>Add<font color="red">(</font><font color="blue">'Zip'</font><font color="red">,</font>ftString<font color="red">,</font><font color="navy">20</font><font color="red">);
+      </font>Add<font color="red">(</font><font color="blue">'Town'</font><font color="red">,</font>ftString<font color="red">,</font><font color="navy">30</font><font color="red">);
+      </font>Add<font color="red">(</font><font color="blue">'Country'</font><font color="red">,</font>ftString<font color="red">,</font><font color="navy">30</font><font color="red">);
+      </font>Add<font color="red">(</font><font color="blue">'Telephone'</font><font color="red">,</font>ftString<font color="red">,</font><font color="navy">15</font><font color="red">);
+      </font>Add<font color="red">(</font><font color="blue">'Fax'</font><font color="red">,</font>ftString<font color="red">,</font><font color="navy">15</font><font color="red">);
+      </font>Add<font color="red">(</font><font color="blue">'Mobile'</font><font color="red">,</font>ftString<font color="red">,</font><font color="navy">15</font><font color="red">);
+      </font>Add<font color="red">(</font><font color="blue">'Email'</font><font color="red">,</font>ftString<font color="red">,</font><font color="navy">100</font><font color="red">);
+      </font>Add<font color="red">(</font><font color="blue">'WWW'</font><font color="red">,</font>ftString<font color="red">,</font><font color="navy">100</font><font color="red">);
+      </font><b>end</b><font color="red">;
+    </font>TableName<font color="red">:=</font>AFileName<font color="red">;
+    </font>CreateTable<font color="red">;
+    </font>Exclusive <font color="red">:= </font>true<font color="red">;
+    </font>Open<font color="red">;
+    </font>AddIndex<font color="red">(</font><font color="blue">'LastName'</font><font color="red">, </font><font color="blue">'LastName'</font><font color="red">, []);
+    </font><b>end</b><font color="red">;
+</font><b>end</b><font color="red">;
+
+</font><b>procedure </b>TMainForm<font color="red">.</font>AOpenExecute<font color="red">(</font>Sender<font color="red">: </font>TObject<font color="red">);
+</font><b>begin
+  With </b>ODDBA  <b>do
+    if </b>Execute <b>then
+      </b>OpenTable<font color="red">(</font>FileName<font color="red">);
+</font><b>end</b><font color="red">;
+
+</font><b>procedure </b>TMainForm<font color="red">.</font>OpenTable<font color="red">(</font>AFileName <font color="red">: </font><b>String</b><font color="red">);
+
+</font><b>begin
+  With </b>DBA <b>do
+    begin
+    </b>Close<font color="red">;
+    </font>TableName<font color="red">:=</font>AFileName<font color="red">;
+    </font>Open<font color="red">;
+    </font><b>end</b><font color="red">;
+</font><b>end</b><font color="red">;
+
+</font><b>procedure </b>TMainForm<font color="red">.</font>CloseTable<font color="red">;
+
+</font><b>begin
+  </b>DBA<font color="red">.</font>Close<font color="red">;
+</font><b>end</b><font color="red">;
+
+</font><b>procedure </b>TMainForm<font color="red">.</font>AQuitExecute<font color="red">(</font>Sender<font color="red">: </font>TObject<font color="red">);
+</font><b>begin
+  </b>Close<font color="red">;
+</font><b>end</b><font color="red">;
+
+</font><b>procedure </b>TMainForm<font color="red">.</font>DataOpen<font color="red">(</font>Sender<font color="red">: </font>TObject<font color="red">);
+</font><b>begin
+  With </b>DBA <b>do
+    </b><font color="red">(</font>Sender <b>as </b>Taction<font color="red">).</font>Enabled<font color="red">:=</font>Active<font color="red">;
+</font><b>end</b><font color="red">;
+
+</font><b>procedure </b>TMainForm<font color="red">.</font>DoDataAction<font color="red">(</font>Sender<font color="red">: </font>TObject<font color="red">);
+</font><b>begin
+  Case </b><font color="red">(</font>Sender <b>as </b>TAction<font color="red">).</font>Tag <b>of
+    </b><font color="navy">0 </font><font color="red">: </font>DBA<font color="red">.</font>First<font color="red">;
+    </font><font color="navy">1 </font><font color="red">: </font>DBA<font color="red">.</font>Prior<font color="red">;
+    </font><font color="navy">2 </font><font color="red">: </font>DBA<font color="red">.</font>Next<font color="red">;
+    </font><font color="navy">3 </font><font color="red">: </font>DBA<font color="red">.</font>Last<font color="red">;
+    </font><font color="navy">4 </font><font color="red">: </font>DBA<font color="red">.</font>Insert<font color="red">;
+    </font><font color="navy">5 </font><font color="red">: </font>DBA<font color="red">.</font>Delete<font color="red">;
+    </font><font color="navy">6 </font><font color="red">: </font>DBA<font color="red">.</font>Edit<font color="red">;
+    </font><font color="navy">7 </font><font color="red">: </font>DBA<font color="red">.</font>Post<font color="red">;
+    </font><font color="navy">8 </font><font color="red">: </font>DBA<font color="red">.</font>Cancel<font color="red">;
+    </font><font color="navy">9 </font><font color="red">: </font>DBA<font color="red">.</font>Refresh<font color="red">;
+  </font><b>end</b><font color="red">;
+</font><b>end</b><font color="red">;
+
+</font><b>procedure </b>TMainForm<font color="red">.</font>FormCloseQuery<font color="red">(</font>Sender<font color="red">: </font>TObject<font color="red">; </font><b>var </b>CanClose<font color="red">: </font>Boolean<font color="red">);
+</font><b>begin
+  </b>CanClose<font color="red">:=</font><b>Not </b><font color="red">(</font>DBA<font color="red">.</font>State <b>in </b>dsEditModes<font color="red">);
+  </font><b>if Not </b>CanClose <b>then
+    case </b>MessageDlg<font color="red">(</font>SSaveData<font color="red">,</font>mtWarning<font color="red">,[</font>mbYes<font color="red">,</font>mbNo<font color="red">,</font>mbCancel<font color="red">],</font><font color="navy">0</font><font color="red">) </font><b>of
+      </b>mrYes <font color="red">: </font><b>begin
+              </b>DBA<font color="red">.</font>Post<font color="red">;
+              </font>CanClose<font color="red">:=</font>True<font color="red">;
+              </font><b>end</b><font color="red">;
+      </font>mrNo  <font color="red">: </font>CanClose<font color="red">:=</font>True<font color="red">;
+    </font><b>end</b><font color="red">;
+</font><b>end</b><font color="red">;
+
+</font><b>procedure </b>TMainForm<font color="red">.</font>FormClose<font color="red">(</font>Sender<font color="red">: </font>TObject<font color="red">; </font><b>var </b>CloseAction<font color="red">: </font>TCloseAction<font color="red">);
+</font><b>begin
+  </b>DBA<font color="red">.</font>Close<font color="red">;
+</font><b>end</b><font color="red">;
+
+</font><b>procedure </b>TMainForm<font color="red">.</font>DBAAfterInsert<font color="red">(</font>DataSet<font color="red">: </font>TDataSet<font color="red">);
+</font><b>begin
+  </b>ELastName<font color="red">.</font>SetFocus<font color="red">;
+</font><b>end</b><font color="red">;
+
+</font><b>procedure </b>TMainForm<font color="red">.</font>HaveDataNotEmpty<font color="red">(</font>Sender<font color="red">: </font>TObject<font color="red">);
+</font><b>begin
+  With </b>DBA <b>do
+    </b><font color="red">(</font>Sender <b>as </b>Taction<font color="red">).</font>Enabled<font color="red">:=</font>Active <b>and Not </b><font color="red">(</font>EOF <b>and </b>BOF<font color="red">);
+</font><b>end</b><font color="red">;
+
+</font><b>procedure </b>TMainForm<font color="red">.</font>InEditMode<font color="red">(</font>Sender<font color="red">: </font>TObject<font color="red">);
+</font><b>begin
+  With </b>DBA <b>do
+    </b><font color="red">(</font>Sender <b>As </b>Taction<font color="red">).</font>EnAbled<font color="red">:=</font>State <b>in </b>dsEditModes<font color="red">;
+</font><b>end</b><font color="red">;
+
+</font><b>end</b><font color="red">.
+</font></font>
+</code></pre>
+</body>
+</html>

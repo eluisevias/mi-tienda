@@ -1,0 +1,18 @@
+unit util.db;
+
+{$mode ObjFPC}{$H+}
+
+interface
+
+uses
+    Classes, SysUtils, DB, SQLDB, SQLite3Conn;
+
+type
+
+
+
+
+implementation
+
+end.
+

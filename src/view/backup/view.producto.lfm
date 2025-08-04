@@ -1,0 +1,322 @@
+object FormProducto: TFormProducto
+  Left = 257
+  Height = 600
+  Top = 250
+  Width = 800
+  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = bsSingle
+  Caption = 'Tienda - Gestión de Productos'
+  ClientHeight = 600
+  ClientWidth = 800
+  Color = clWhite
+  Position = poMainFormCenter
+  OnCreate = FormCreate
+  object Tab: TNotebook
+    Left = 0
+    Height = 600
+    Top = 0
+    Width = 800
+    PageIndex = 0
+    Align = alClient
+    TabOrder = 0
+    object Page1: TPage
+      object StringGrid1: TStringGrid
+        AnchorSideLeft.Control = Page1
+        AnchorSideTop.Control = PanelToolbar
+        AnchorSideTop.Side = asrBottom
+        AnchorSideRight.Control = Page1
+        AnchorSideRight.Side = asrBottom
+        AnchorSideBottom.Control = Page1
+        AnchorSideBottom.Side = asrBottom
+        Left = 12
+        Height = 516
+        Top = 72
+        Width = 776
+        AlternateColor = cl3DLight
+        Anchors = [akTop, akLeft, akRight, akBottom]
+        BorderSpacing.Left = 12
+        BorderSpacing.Top = 12
+        BorderSpacing.Right = 12
+        BorderSpacing.Bottom = 12
+        ColCount = 4
+        Columns = <        
+          item
+            Title.Caption = 'ID'
+            Width = 80
+          end        
+          item
+            Title.Caption = 'Producto'
+            Width = 300
+          end        
+          item
+            Title.Caption = 'Stock'
+            Width = 100
+          end        
+          item
+            Title.Caption = 'Precio de Venta'
+            Width = 144
+          end>
+        FixedCols = 0
+        MouseWheelOption = mwGrid
+        Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goRowSelect, goSmoothScroll]
+        RowCount = 4
+        ScrollBars = ssVertical
+        TabOrder = 0
+      end
+      object PanelToolbar: TPanel
+        Left = 0
+        Height = 60
+        Top = 0
+        Width = 800
+        Align = alTop
+        BevelOuter = bvNone
+        BorderStyle = bsSingle
+        ClientHeight = 56
+        ClientWidth = 796
+        Color = clMenuBar
+        ParentBackground = False
+        ParentColor = False
+        TabOrder = 1
+        object EditBuscar: TEdit
+          AnchorSideLeft.Control = PanelToolbar
+          AnchorSideTop.Control = PanelToolbar
+          AnchorSideTop.Side = asrCenter
+          Left = 12
+          Height = 23
+          Top = 17
+          Width = 264
+          BorderSpacing.Left = 12
+          TabOrder = 0
+          Text = 'EditBuscar'
+        end
+        object ButtonBuscar: TButton
+          AnchorSideLeft.Control = EditBuscar
+          AnchorSideLeft.Side = asrBottom
+          AnchorSideTop.Control = PanelToolbar
+          AnchorSideTop.Side = asrCenter
+          AnchorSideBottom.Control = PanelToolbar
+          Left = 279
+          Height = 25
+          Top = 16
+          Width = 60
+          BorderSpacing.Left = 3
+          Caption = 'Buscar'
+          TabOrder = 1
+        end
+        object ButtonEditar: TButton
+          AnchorSideTop.Control = PanelToolbar
+          AnchorSideTop.Side = asrCenter
+          AnchorSideRight.Control = ButtonEliminar
+          Left = 661
+          Height = 25
+          Top = 16
+          Width = 60
+          Anchors = [akTop, akRight]
+          BorderSpacing.Right = 3
+          Caption = 'Editar'
+          TabOrder = 3
+        end
+        object ButtonAgregar: TButton
+          AnchorSideTop.Control = PanelToolbar
+          AnchorSideTop.Side = asrCenter
+          AnchorSideRight.Control = ButtonEditar
+          Left = 598
+          Height = 25
+          Top = 16
+          Width = 60
+          Anchors = [akTop, akRight]
+          BorderSpacing.Right = 3
+          Caption = 'Agregar'
+          TabOrder = 2
+          OnClick = ButtonAgregarClick
+        end
+        object ButtonEliminar: TButton
+          AnchorSideTop.Control = PanelToolbar
+          AnchorSideTop.Side = asrCenter
+          AnchorSideRight.Control = PanelToolbar
+          AnchorSideRight.Side = asrBottom
+          Left = 724
+          Height = 25
+          Top = 16
+          Width = 60
+          Anchors = [akTop, akRight]
+          BorderSpacing.Right = 12
+          Caption = 'Eliminar'
+          TabOrder = 4
+        end
+      end
+    end
+    object Page2: TPage
+      object PanelToolbar1: TPanel
+        Left = 0
+        Height = 60
+        Top = 0
+        Width = 669
+        Align = alTop
+        BevelOuter = bvNone
+        BorderStyle = bsSingle
+        ClientHeight = 60
+        ClientWidth = 669
+        Color = clMenuBar
+        ParentBackground = False
+        ParentColor = False
+        TabOrder = 8
+        object ButtonGuardar: TButton
+          AnchorSideTop.Control = PanelToolbar1
+          AnchorSideTop.Side = asrCenter
+          AnchorSideRight.Control = ButtonCancelar
+          Left = 530
+          Height = 25
+          Top = 16
+          Width = 60
+          Anchors = [akTop, akRight]
+          BorderSpacing.Right = 3
+          Caption = 'Guardar'
+          TabOrder = 0
+        end
+        object ButtonCancelar: TButton
+          AnchorSideTop.Control = PanelToolbar1
+          AnchorSideTop.Side = asrCenter
+          AnchorSideRight.Control = PanelToolbar1
+          AnchorSideRight.Side = asrBottom
+          Left = 593
+          Height = 25
+          Top = 16
+          Width = 60
+          Anchors = [akTop, akRight]
+          BorderSpacing.Right = 12
+          Caption = 'Cancelar'
+          TabOrder = 1
+          OnClick = ButtonCancelarClick
+        end
+        object Label9: TLabel
+          AnchorSideLeft.Control = PanelToolbar1
+          AnchorSideTop.Control = PanelToolbar1
+          AnchorSideTop.Side = asrCenter
+          Left = 12
+          Height = 23
+          Top = 17
+          Width = 155
+          BorderSpacing.Left = 12
+          Caption = 'Datos del producto'
+          Font.Height = -17
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+      end
+      object Label1: TLabel
+        Left = 16
+        Height = 15
+        Top = 72
+        Width = 39
+        Caption = 'Código'
+      end
+      object Label2: TLabel
+        Left = 144
+        Height = 15
+        Top = 72
+        Width = 44
+        Caption = 'Nombre'
+      end
+      object Label3: TLabel
+        Left = 16
+        Height = 15
+        Top = 120
+        Width = 68
+        Caption = 'Presentacion'
+      end
+      object Label4: TLabel
+        Left = 144
+        Height = 15
+        Top = 120
+        Width = 36
+        Caption = 'Detalle'
+      end
+      object Label5: TLabel
+        Left = 16
+        Height = 15
+        Top = 168
+        Width = 29
+        Caption = 'Stock'
+      end
+      object Label6: TLabel
+        Left = 144
+        Height = 15
+        Top = 216
+        Width = 81
+        Caption = 'Precio de venta'
+      end
+      object Label7: TLabel
+        Left = 16
+        Height = 15
+        Top = 216
+        Width = 86
+        Caption = 'Valor de compra'
+      end
+      object Label8: TLabel
+        Left = 496
+        Height = 15
+        Top = 168
+        Width = 24
+        Caption = 'Foto'
+      end
+      object EditCodigo: TEdit
+        Left = 16
+        Height = 23
+        Top = 88
+        Width = 96
+        TabOrder = 0
+      end
+      object EditPresentacion: TEdit
+        Left = 16
+        Height = 23
+        Top = 136
+        Width = 96
+        TabOrder = 2
+      end
+      object EditDetalle: TEdit
+        Left = 144
+        Height = 23
+        Top = 136
+        Width = 432
+        TabOrder = 3
+      end
+      object EditStock: TEdit
+        Left = 16
+        Height = 23
+        Top = 184
+        Width = 96
+        TabOrder = 4
+      end
+      object EditValorCompra: TEdit
+        Left = 16
+        Height = 23
+        Top = 232
+        Width = 96
+        TabOrder = 5
+      end
+      object EditFoto: TEdit
+        Left = 496
+        Height = 23
+        Top = 192
+        Width = 80
+        TabOrder = 7
+      end
+      object EditPrecioVenta: TEdit
+        Left = 144
+        Height = 23
+        Top = 232
+        Width = 96
+        TabOrder = 6
+        OnChange = EditPrecioVentaChange
+      end
+      object EditNombre: TEdit
+        Left = 144
+        Height = 23
+        Top = 88
+        Width = 432
+        TabOrder = 1
+      end
+    end
+  end
+end

@@ -1,0 +1,170 @@
+object frm_main: Tfrm_main
+  Left = 149
+  Height = 240
+  Top = 250
+  Width = 470
+  Caption = 'frm_main'
+  ClientHeight = 240
+  ClientWidth = 470
+  Color = clWhite
+  Menu = MainMenu
+  WindowState = wsMaximized
+  OnCreate = FormCreate
+  object Panel1: TPanel
+    Left = 0
+    Height = 80
+    Top = 0
+    Width = 470
+    Align = alTop
+    BevelOuter = bvNone
+    BorderStyle = bsSingle
+    ClientHeight = 76
+    ClientWidth = 466
+    Color = clMenuBar
+    ParentBackground = False
+    ParentColor = False
+    TabOrder = 0
+    object BitBtn1: TBitBtn
+      Left = 6
+      Height = 64
+      Top = 6
+      Width = 75
+      Align = alLeft
+      BorderSpacing.Left = 6
+      BorderSpacing.Top = 6
+      BorderSpacing.Bottom = 6
+      Caption = 'BitBtn1'
+      TabOrder = 0
+      OnClick = BitBtn1Click
+    end
+    object BitBtn2: TBitBtn
+      Left = 87
+      Height = 64
+      Top = 6
+      Width = 75
+      Align = alLeft
+      BorderSpacing.Left = 6
+      BorderSpacing.Top = 6
+      BorderSpacing.Bottom = 6
+      Caption = 'BitBtn2'
+      TabOrder = 1
+    end
+    object BitBtn3: TBitBtn
+      Left = 168
+      Height = 64
+      Top = 6
+      Width = 75
+      Align = alLeft
+      BorderSpacing.Left = 6
+      BorderSpacing.Top = 6
+      BorderSpacing.Bottom = 6
+      Caption = 'BitBtn3'
+      TabOrder = 2
+    end
+    object BitBtn4: TBitBtn
+      Left = 249
+      Height = 64
+      Top = 6
+      Width = 75
+      Align = alLeft
+      BorderSpacing.Left = 6
+      BorderSpacing.Top = 6
+      BorderSpacing.Bottom = 6
+      Caption = 'BitBtn4'
+      TabOrder = 3
+    end
+    object BitBtn5: TBitBtn
+      Left = 330
+      Height = 64
+      Top = 6
+      Width = 75
+      Align = alLeft
+      BorderSpacing.Left = 6
+      BorderSpacing.Top = 6
+      BorderSpacing.Bottom = 6
+      Caption = 'BitBtn5'
+      TabOrder = 4
+    end
+  end
+  object MainMenu: TMainMenu
+    Left = 8
+    Top = 88
+    object MenuItem1: TMenuItem
+      Caption = 'Archivo'
+      object MenuItem2: TMenuItem
+        Caption = 'Gestión'
+        object mnu_producto: TMenuItem
+          Caption = 'Productos'
+          OnClick = mnu_productoClick
+        end
+        object MenuItem4: TMenuItem
+          Caption = 'Clientes'
+        end
+        object MenuItem5: TMenuItem
+          Caption = 'Empresa'
+        end
+      end
+      object Separator1: TMenuItem
+        Caption = '-'
+      end
+      object mnu_salir: TMenuItem
+        Caption = 'Salir'
+        OnClick = mnu_salirClick
+      end
+    end
+    object MenuItem7: TMenuItem
+      Caption = 'Inventario'
+      object MenuItem8: TMenuItem
+        Caption = 'Ver Inventario'
+      end
+      object MenuItem9: TMenuItem
+        Caption = 'Entrada de Productos'
+      end
+      object MenuItem10: TMenuItem
+        Caption = 'Salida de Productos'
+      end
+    end
+    object MenuItem11: TMenuItem
+      Caption = 'Ventas'
+      object MenuItem12: TMenuItem
+        Caption = 'Registrar Ventas'
+      end
+      object MenuItem13: TMenuItem
+        Caption = 'Historial de Ventas'
+      end
+    end
+    object MenuItem14: TMenuItem
+      Caption = 'Reportes'
+      object MenuItem15: TMenuItem
+        Caption = 'Reporte de Inventario'
+      end
+      object MenuItem16: TMenuItem
+        Caption = 'Reporte Ventas'
+      end
+      object MenuItem17: TMenuItem
+        Caption = 'Reporte de Clientes'
+      end
+    end
+    object MenuItem18: TMenuItem
+      Caption = 'Herramientas'
+      object MenuItem19: TMenuItem
+        Caption = 'Base de Datos'
+        object MenuItem20: TMenuItem
+          Caption = 'Exportar Base de Datos'
+        end
+        object MenuItem21: TMenuItem
+          Caption = 'Importar Base de Datos'
+        end
+      end
+    end
+    object MenuItem22: TMenuItem
+      Caption = 'Ayuda'
+      object MenuItem23: TMenuItem
+        Caption = 'Documentacion'
+      end
+      object MenuItem24: TMenuItem
+        Caption = 'Acerca de ...'
+      end
+    end
+  end
+end

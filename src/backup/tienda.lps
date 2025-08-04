@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Windows"/>
+    <Units>
+      <Unit>
+        <Filename Value="tienda.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="1"/>
+        <CursorPos X="57" Y="13"/>
+        <UsageCount Value="60"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="view\view.main.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frm_main"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <TopLine Value="74"/>
+        <CursorPos X="14" Y="87"/>
+        <UsageCount Value="60"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="view\view.producto.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormProducto"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="3"/>
+        <CursorPos X="9" Y="9"/>
+        <UsageCount Value="58"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="view\view.cliente.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="4"/>
+        <TopLine Value="5"/>
+        <CursorPos X="11" Y="9"/>
+        <UsageCount Value="52"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="view.main.pas"/>
+        <ComponentName Value="Form1"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="16"/>
+      </Unit>
+      <Unit>
+        <Filename Value="views\view.main.pas"/>
+        <ComponentName Value="Form1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="16"/>
+      </Unit>
+      <Unit>
+        <Filename Value="view\unit1.pas"/>
+        <ComponentName Value="frm_main"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Unit1"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="18"/>
+        <CursorPos X="3" Y="33"/>
+        <UsageCount Value="16"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\lcl\extctrls.pp"/>
+        <UnitName Value="ExtCtrls"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="138"/>
+        <CursorPos X="14" Y="147"/>
+        <UsageCount Value="7"/>
+      </Unit>
+      <Unit>
+        <Filename Value="util\util.db"/>
+        <UnitName Value="Unit1"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos Y="11"/>
+        <UsageCount Value="19"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="util\util.db.pas"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="50"/>
+        <CursorPos X="14" Y="54"/>
+        <UsageCount Value="50"/>
+        <Loaded Value="True"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="29">
+      <Position>
+        <Filename Value="view\view.producto.pas"/>
+        <Caret Line="96" Column="3" TopLine="81"/>
+      </Position>
+      <Position>
+        <Filename Value="view\view.producto.pas"/>
+        <Caret Line="46" Column="15" TopLine="37"/>
+      </Position>
+      <Position>
+        <Filename Value="view\view.producto.pas"/>
+        <Caret Line="96" Column="3" TopLine="81"/>
+      </Position>
+      <Position>
+        <Filename Value="view\view.producto.pas"/>
+        <Caret Line="46" Column="15" TopLine="37"/>
+      </Position>
+      <Position>
+        <Filename Value="view\view.producto.pas"/>
+        <Caret Line="96" Column="3" TopLine="81"/>
+      </Position>
+      <Position>
+        <Filename Value="view\view.producto.pas"/>
+        <Caret Line="46" Column="15" TopLine="37"/>
+      </Position>
+      <Position>
+        <Filename Value="view\view.producto.pas"/>
+        <Caret Line="101" Column="4" TopLine="85"/>
+      </Position>
+      <Position>
+        <Filename Value="view\view.producto.pas"/>
+        <Caret Line="96" Column="4" TopLine="85"/>
+      </Position>
+      <Position>
+        <Filename Value="view\view.producto.pas"/>
+        <Caret Line="100" Column="3"/>
+      </Position>
+      <Position>
+        <Filename Value="view\view.producto.pas"/>
+        <Caret Line="96" Column="3" TopLine="86"/>
+      </Position>
+      <Position>
+        <Filename Value="view\view.producto.pas"/>
+        <Caret Line="100" Column="3" TopLine="81"/>
+      </Position>
+      <Position>
+        <Filename Value="view\view.producto.pas"/>
+        <Caret Line="91" Column="3" TopLine="81"/>
+      </Position>
+      <Position>
+        <Filename Value="view\view.cliente.pas"/>
+      </Position>
+      <Position>
+        <Filename Value="view\view.producto.pas"/>
+        <Caret Line="91" Column="11" TopLine="63"/>
+      </Position>
+      <Position>
+        <Filename Value="view\view.cliente.pas"/>
+        <Caret Line="9" Column="12" TopLine="5"/>
+      </Position>
+      <Position>
+        <Filename Value="view\view.main.pas"/>
+        <Caret Line="78" TopLine="61"/>
+      </Position>
+      <Position>
+        <Filename Value="view\view.main.pas"/>
+        <Caret Line="71" TopLine="12"/>
+      </Position>
+      <Position>
+        <Filename Value="util\util.db.pas"/>
+        <Caret Line="20" Column="7"/>
+      </Position>
+      <Position>
+        <Filename Value="util\util.db.pas"/>
+        <Caret Line="21" Column="31" TopLine="11"/>
+      </Position>
+      <Position>
+        <Filename Value="util\util.db.pas"/>
+        <Caret Line="18" Column="24" TopLine="17"/>
+      </Position>
+      <Position>
+        <Filename Value="util\util.db.pas"/>
+        <Caret Line="24" Column="30" TopLine="14"/>
+      </Position>
+      <Position>
+        <Filename Value="view\view.main.pas"/>
+        <Caret Line="49" Column="5" TopLine="32"/>
+      </Position>
+      <Position>
+        <Filename Value="view\view.main.pas"/>
+        <Caret Line="87" Column="14" TopLine="74"/>
+      </Position>
+      <Position>
+        <Filename Value="util\util.db.pas"/>
+        <Caret Line="38" Column="71" TopLine="28"/>
+      </Position>
+      <Position>
+        <Filename Value="util\util.db.pas"/>
+        <Caret Line="37" Column="44" TopLine="28"/>
+      </Position>
+      <Position>
+        <Filename Value="util\util.db.pas"/>
+        <Caret Line="40" Column="23" TopLine="29"/>
+      </Position>
+      <Position>
+        <Filename Value="util\util.db.pas"/>
+        <Caret Line="39" Column="67" TopLine="30"/>
+      </Position>
+      <Position>
+        <Filename Value="util\util.db.pas"/>
+        <Caret Line="21" Column="7" TopLine="10"/>
+      </Position>
+      <Position>
+        <Filename Value="util\util.db.pas"/>
+        <Caret Line="20" Column="5" TopLine="10"/>
+      </Position>
+      <Position>
+        <Filename Value="util\util.db.pas"/>
+        <Caret Line="21" Column="8" TopLine="9"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>
